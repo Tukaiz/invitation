@@ -1,0 +1,6 @@
+= simple_form_for(@invitation, {url: update_invitation_path, method: :put}) do |f|
+  = f.error_notification
+  = f.input :password
+  = f.input :password_confirmation
+  = f.input :invitation_token, as: :hidden
+  = f.submit
