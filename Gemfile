@@ -13,3 +13,6 @@ gem 'feature_system', '0.0.2', :git => 'git@github.com:Tukaiz/feature_system.git
 
 # To use debugger
 # gem 'debugger'
+group :development, :test do
+  gem 'pry'
+end
