@@ -5,6 +5,8 @@ source "https://rubygems.org"
 # development dependencies will be added by default to the :development group.
 gemspec
 gem 'feature_system', '0.0.2', :git => 'git@github.com:Tukaiz/feature_system.git'
+gem 'httparty'
+gem 'haml-rails'
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
@@ -15,4 +17,5 @@ gem 'feature_system', '0.0.2', :git => 'git@github.com:Tukaiz/feature_system.git
 # gem 'debugger'
 group :development, :test do
   gem 'pry'
+  gem 'rspec-rails'
 end

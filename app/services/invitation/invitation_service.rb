@@ -1,8 +1,5 @@
 module Invitation
   class InvitationService
-    # Dependencies on CasUri, HTTParty, and Cas::Authorization should
-    # be looked into
-    include Cas::Authorization
     attr_accessor :email, :site_name, :site_uri
 
     def initialize(email, site_name, site_uri)
@@ -12,11 +9,10 @@ module Invitation
     end
 
     def invite
-      HTTParty.post(CasUri.invitation.to_s,
+      HTTParty.post(Invitation.uri_class_name.invitation.to_s,
                         body: {user:{ email: email,
                           site_name: site_name,
-                          site_uri: site_uri }},
-                          headers: self.headers)
+                          site_uri: site_uri }})
     end
   end
 end

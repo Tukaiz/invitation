@@ -1,7 +1,5 @@
 module Invitation
   class InvitationForm
-    # Dependency on Cas::Authorization here.  Should look into abstracting.
-    include Cas::Authorization
     include ActiveModel::Model
     attr_accessor :email, :current_site_name, :accept_invitation_url
     validates :email, presence: true
