@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    invitation (0.0.2)
+    invitation (0.0.3)
       cancan
       cells
       haml-rails
