@@ -19,4 +19,5 @@ module Invitation
     module Permissions
     end
   end
+
 end
