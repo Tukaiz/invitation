@@ -9,7 +9,7 @@ module Invitation
     end
 
     def invite
-      HTTParty.post(Invitation.uri_class_name.invitation.to_s,
+      HTTParty.post(Invitation.uri_class_name.constantize.invitation.to_s,
                         body: {user:{ email: email,
                           site_name: site_name,
                           site_uri: site_uri }})
